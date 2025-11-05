@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <nav>
+      <button class="toggle" onclick="toggleNav()">menu</button>
+      <div class="logo">Logo</div>
+      <ul>
+        <li>Home</li>
+        <li>Services</li>
+        <li>Help</li>
+        <li>About</li>
+      </ul>
+      <button class="logout">Logout</button>
+    </nav>
+
+    <button onclick="modalBtn()" class="modalBtn">Modal</button>
+
+     <form class="form">
+
+        <h1>Login</h1>
+        
+        <label for="name" class="name">Username</label>
+        <input type="text" ><br>
+
+        <label for="Pass" class="pass">Password</label>
+        <input type="password" >
+
+        <button class="btn">Submit</button>
+
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

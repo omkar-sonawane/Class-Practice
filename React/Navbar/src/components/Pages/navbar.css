@@ -1,0 +1,36 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 15px 10px;
+}
+
+nav .logo{
+    font-size: larger;
+    font-weight: bolder;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-size: larger;
+    /* text-decoration: underline; */
+}
+nav li{
+    text-decoration: underline;
+    transition: all 0.1s ease-in;
+}
+nav ul li:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav div{
+    font-size: larger;
+    font-weight: bolder;
+}

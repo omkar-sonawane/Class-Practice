@@ -1,0 +1,112 @@
+@font-face {
+    font-family: neu;
+    src: url(NeueMachina-Regular_DQCmjH1st.ttf);
+}
+@font-face {
+    font-family: hell;
+    src: url(HelveticaNowDisplay-Medium_2wEhlmo-TD.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color:white;
+}
+
+body{
+    background-color: black;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 70px;
+    position: fixed;
+    width: 100%;
+}
+
+.nav1{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav1 h4{
+    font-family: neu;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 100;
+}
+
+
+.nav1 img{
+    height: 45px;
+}
+
+.nav2 h4{
+    font-family: neu;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.nav2 h4 i{
+    font-size: 20px;
+}
+.nav2{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.nav2 img{
+    height: 30px;
+    border-radius: 50%;
+    width: 30px;
+}
+
+.nav3 h4{
+    font-family: neu;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+
+.nav3{
+    display: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav3 img{
+    height: 25px;
+    border-radius: 50%;
+    width: 25px;
+}
+
+
+@media (max-width:600px){
+    nav{
+        padding: 13px 20px;
+    }
+    .nav1 img{
+        height: 30px;
+    }
+    .nav1 h4{
+        font-size: 12px;
+    }
+
+    .nav2{
+        display: none;
+    }
+
+    .nav3{
+        display: flex;
+    }
+}
+
+
+
+main{
+    
+}

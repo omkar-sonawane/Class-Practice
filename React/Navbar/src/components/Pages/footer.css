@@ -1,0 +1,13 @@
+footer{
+    background-color:rgba(250, 235, 215, 0.441);
+    display: flex;
+    justify-content:space-evenly;
+    padding: 20px;
+    margin-top: 180px;
+}
+footer li{
+    list-style: none;
+}
+footer h4{
+    margin-bottom: 10px;
+}
