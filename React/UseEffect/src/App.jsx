@@ -32,7 +32,7 @@ function App() {
     <>
       
       <Form value={state} setValue={setState}/>
-      .....{target}........
+      
 
       <button type='button' onClick={onSetTarget}>ADD</button>
 

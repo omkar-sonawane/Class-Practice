@@ -1,5 +1,14 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import './userform.css'
+
+
+
+const userField = [
+    { id: "name", label: "User Name" },
+    { id: "age", label: "User Age", type: "number" },
+    { id: "address", label: "User Address" },
+    { id: "mobile", label: "User Mobile", type: "number" },
+];
 
 const Usercardform = (props) => {
 
@@ -27,36 +36,52 @@ const Usercardform = (props) => {
     //     setAddress(e.target.value)
     // }
 
-    const [user , setUser] = useState(props.data)
-    const handleChange = (e)=>{
-        const fieldname =  e.target.id
+    // const [user , setUser] = useState(props.data)
 
-        console.log(fieldname)
+    const user = props.user;
+    const setUser = props.setUser;
 
-        let temp_user = {...user}
 
-        if (fieldname == "username"){
-            temp_user.name= e.target.value
-        }
-        if (fieldname == "surname"){
-            temp_user.surname = e.target.value
-        }
-        if (fieldname == "age"){
-            temp_user.age = e.target.value
-        }
-        if (fieldname == "address"){
-            temp_user.address = e.target.value
-        }
-        console.log(temp_user)
-        
-        setUser(temp_user)
+    const handleChange = (e) => {
+
+        // const fieldname =  e.target.id
+
+        // console.log(fieldname)
+
+        // let temp_user = {...user}
+
+        // if (fieldname == "username"){
+        //     temp_user.name= e.target.value
+        // }
+        // if (fieldname == "surname"){
+        //     temp_user.surname = e.target.value
+        // }
+        // if (fieldname == "age"){
+        //     temp_user.age = e.target.value
+        // }
+        // if (fieldname == "address"){
+        //     temp_user.address = e.target.value
+        // }
+        // console.log(temp_user)
+
+        // setUser(temp_user)
+
+        ////////////////////////////////////////////////////////////////////
+        const id = e.target.id; // "name" | "age" | "address" | "mobile"
+        const value = e.target.value;
+
+        setUser({ ...user, [id]: value });
     }
 
 
-  return (
-    <div className="usercard">
-      <div className='field'>
-        <label >Name - </label>
+
+    return (
+        <>
+
+
+            <div className="usercard">
+                <div className='field'>
+                    {/* /* <label >Name - </label>
         <input id='username'  value={user.name}  onChange={handleChange}/>
       </div>
       <div className='field'>
@@ -69,10 +94,34 @@ const Usercardform = (props) => {
       </div>
       <div className='field' >
         <label >Address - </label>
-        <input id='address' value={user.address} onChange={handleChange} />
-      </div>
-    </div>
-  )
+        <input id='address' value={user.address} onChange={handleChange} /> */ }
+                    {
+                        userField.map((field) => {
+                            return (
+                                <div>
+                                    <label>{field.label}</label>
+                                    <input
+                                        id={field.id}
+                                        type={field.type}
+                                        value={user[field.id]}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+
+
+                            )
+                        }
+                        )
+
+                    }
+                </div>
+            </div>
+        </>
+    )
+
+
 }
+
+
 
 export default Usercardform

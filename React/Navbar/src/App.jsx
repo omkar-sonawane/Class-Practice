@@ -17,8 +17,6 @@ function App() {
     address:"Pune"
   })
     
-  
-
   // console.log(user)
   
   return (
@@ -28,7 +26,7 @@ function App() {
       <Navbar/>
       <Main/>
       <Usercard data={user} />
-      <Usercardform data={user} setUser={setUser}/>
+      <Usercardform user={user} setUser={setUser}/>
       <Footer/>
       
     </>
